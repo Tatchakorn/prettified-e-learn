@@ -1,8 +1,8 @@
 {
-  "name": "template",
+  "name": "vue-template",
   "version": "0.1.0",
   "private": true,
-  "description": "Template",
+  "description": "Vue Template",
   "license": "UNLICENSED",
   "author": {
     "name": "Alpha Pulse",

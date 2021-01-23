@@ -1,6 +1,6 @@
 const packageJson = require('./package.json');
 
-const appName = '中醫診斷系統';
+const appName = 'Vue Template';
 const appIcon = 'application';
 const themeColor = '#1976d2';
 const i18nLocale = 'en';
