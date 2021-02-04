@@ -1,5 +1,6 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
+import Register from '@/views/Register';
 
 Vue.use(VueRouter);
 
@@ -8,6 +9,11 @@ const routes = [
     path: '/',
     name: 'Home',
     component: () => import(/* webpackChunkName: "home" */ '@/views/Home'),
+  },
+  {
+    path: '/register',
+    name: 'register',
+    component: Register,
   },
 ];
 

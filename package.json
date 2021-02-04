@@ -13,9 +13,15 @@
       "name": "Yùjǐn Lín",
       "email": "abc1236762@outlook.com",
       "url": "https://yurina.xyz/"
+    },
+    {
+      "name": "Saitako",
+      "email": "saitako@outlook.com",
+      "url": "https://www.google.com"
     }
   ],
   "scripts": {
+    "git-addall": "git add .",
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",

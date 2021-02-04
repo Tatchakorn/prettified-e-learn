@@ -1,7 +1,7 @@
 <template>
   <div class="home" style="height: calc(100vh - 48px)">
     <v-container>
-      <v-btn>A</v-btn>
+      <v-btn>AB</v-btn>
     </v-container>
   </div>
 </template>
@@ -10,11 +10,10 @@
 import Vue from 'vue';
 
 import extensions from '@/mixins/extensions';
-
 import inputRules from '@/mixins/inputRules';
 
 export default Vue.extend({
-  name: 'Home',
+  name: 'Register',
   components: {},
   mixins: [extensions, inputRules],
   data: () => ({
