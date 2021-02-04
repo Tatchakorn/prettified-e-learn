@@ -1,6 +1,6 @@
 const packageJson = require('./package.json');
 
-const appName = 'Vue Template';
+const appName = 'E-leaning';
 const appIcon = 'application';
 const themeColor = '#1976d2';
 const i18nLocale = 'en';
