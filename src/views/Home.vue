@@ -7,10 +7,9 @@
 </template>
 
 <script>
+
 import Vue from 'vue';
-
 import extensions from '@/mixins/extensions';
-
 import inputRules from '@/mixins/inputRules';
 
 export default Vue.extend({

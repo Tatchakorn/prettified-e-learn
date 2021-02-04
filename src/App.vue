@@ -9,6 +9,7 @@
       :permanent="!$vuetify.breakpoint.mobile"
       :touchless="!$vuetify.breakpoint.mobile"
     >
+      <!-- Begin Route List -->
       <v-list dense>
         <v-list-item v-for="(item, i) in navListItems" :key="`navListItems-${i}`" :to="item.path">
           <v-list-item-icon>
@@ -19,9 +20,10 @@
           </v-list-item-content>
         </v-list-item>
       </v-list>
+      <!-- End Routes List -->
     </v-navigation-drawer>
     <v-app-bar app clipped-left color="primary" dark dense>
-      <template v-if="isCurrentPathInNavListItems">
+      <template>
         <v-app-bar-nav-icon
           v-if="$vuetify.breakpoint.mobile"
           @click.stop="navDrawerOpen = !navDrawerOpen"
@@ -30,7 +32,7 @@
           mdi-{{ $store.state.app.icon }}
         </v-icon>
       </template>
-      <v-btn v-else icon @click="$router.back()">
+      <v-btn icon @click="$router.back()">
         <v-icon>mdi-arrow-left</v-icon>
       </v-btn>
       <v-toolbar-title class="pl-0">{{ $store.state.app.name }}</v-toolbar-title>
@@ -64,7 +66,12 @@
           </about-dialog>
         </v-list>
       </v-menu>
+      <v-btn color="secondary">
+        <span>Sign Out</span>
+        <v-icon right>mdi-logout</v-icon>
+      </v-btn>
     </v-app-bar>
+    <!--  -->
     <v-main>
       <transition name="fade" mode="out-in">
         <router-view style="height: calc(100vh - 48px)" />
@@ -103,6 +110,31 @@ export default Vue.extend({
         title: 'Home',
         path: '/',
         icon: 'mdi-home',
+      },
+      {
+        title: 'Register',
+        path: 'register',
+        icon: 'mdi-file',
+      },
+    ],
+    semesterList: [
+      {
+        semester: '109 2nd semester',
+        courseList: [
+          { id: 'CSIEB0190', title: 'Formal Languages and Automata', path: '/' },
+          { id: 'CSIEB0280', title: 'Computer Networks', path: '/' },
+          { id: 'CSIEM0480', title: 'Very large integrated circuit design', path: '/' },
+          { id: 'CSIEM0310', title: 'Introduction to Soft Computing', path: '/' },
+        ],
+      },
+      {
+        semester: '109 1st semester',
+        courseList: [
+          { id: 'CSIEB0290', title: 'Database Systems', path: '/' },
+          { id: 'CSIE3530AA', title: 'XML Design and Applications', path: '/' },
+          { id: 'CSIEB0160', title: 'Computer Architecture', path: '/' },
+          { id: 'PHYS1000AC', title: 'General Physics(I)', path: '/' },
+        ],
       },
     ],
     navDrawerOpen: false,
